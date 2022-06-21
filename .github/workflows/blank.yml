@@ -1,0 +1,19 @@
+name: Build Windows App with PyInstaller
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Test Build Tags'
+jobs:
+  winbuild:
+      runs-on: ubuntu-latest
+  
+      steps:
+       - uses: actions/checkout@v2
+       - uses: FedericoCarboni/setup-ffmpeg@v1
+    
+       - name: Getting Packages
+         run: |
+           pip3 install -U yt-dlp
+           yt-dlp
