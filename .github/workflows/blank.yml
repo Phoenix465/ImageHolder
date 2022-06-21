@@ -1,4 +1,4 @@
-name: Build Windows App with PyInstaller
+name: Test
 
 on:
   workflow_dispatch:
